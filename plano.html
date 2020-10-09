@@ -1,0 +1,100 @@
+<html>
+	<head>
+		<title>Callidus Lupos - Planos</title>
+		<meta charset="utf8">
+		<link rel="stylesheet" href="_css/planos.css" type="text/css">
+		<link rel="icon" type="img/png" href="imagem/logo.png">
+		<script src="jquery.js" type="text/javascript"></script>
+		<script type="text/javascript"></script>
+		<script src="spo.js" type="text/javascript"></script>
+		<script>
+			function log(lolo){
+				document.getElementById("logos").src = lolo;
+			}
+			
+			$(document).ready(function(){
+	$('#contat').click(function(){  
+		$('#tell').fadeOut(500);
+		$('#fun, #telefone').fadeIn(500);
+	});
+	
+	$('#fechar , #fun').click(function(event){
+		if(event.target !== this){
+			return;
+		}
+			$('#fun,#telefone').fadeOut(500);
+			$('#tell').fadeIn(0.1);
+	});
+	
+});
+
+	function down(){
+		alert("Os servidores estão em manutenção, tente mais tarde!");
+	}
+		</script>
+	</head>
+	<body>
+		<div id="back">
+				<p id="tri"><img src="imagem/trial.png"></p>
+				<h1>ESCOLHA JÁ SEU PLANO</h1>
+				<div class="plano"><p class="titu">Basico</p><p id="temp">3</p><p id="mes">Meses</p><p id="preco">R$ 59,00 / cada</p><a href=""><input type="button" value="Download" onclick="down()"></a></div>
+				<div class="plano"><p class="titu" id="norm">Normal</p><p id="temp">6</p><p id="mes">Meses</p><p id="preco">R$ 134,50 / cada</p><a href=""><input type="button" value="Download" onclick="down()"></a></div>
+				<div class="plano"><p class="titu" id="diam">Diamante</p><p id="temp">12</p><p id="mes">Meses</p><p id="preco">R$ 376,00 / cada</p><a href=""><input type="button" value="Download" onclick="down()"></a></div>
+		</div>
+			<div class="nav">
+		    <a href="index.html"><img src="imagem/logo.png" width="56"></a><h4>Sistema de provas off-line</h4>
+           			<ul>
+					<li id="ico"><img src="imagem/trans.png" id="logos" width="50px"></li>
+				    <a href="index.html" class="menu"><li class="ba" onmousemove="log('imagem/home.png')" onmouseout="log('imagem/trans.png')">Home</li></a>
+				    <li class="barr">Produtos
+						<ul>
+							
+							<a href="SPO.html"><li class="men" id="cima">SPO</li></a>
+							<a href="http://galeria.fabricadeaplicativos.com.br/callidus_lupos" target="_blank"><li class="men" id="cima">Aplicativos</li></a>
+							<a href=""><li class="men">Outros</li></a>
+						</ul>
+					</li>
+			        </ul>
+		</div>  
+			<div id="roda">
+				<table>
+					<tr border="0">
+						<td><a href="https://www.facebook.com/callidus.lupus" target="_blank"><img src="imagem/grey-facebook.png" width="35px"></a></td>
+					<td><a href="https://www.instagram.com/callidusluspos/" target="_blank"><img src="imagem/insta.png" width="35px"></a></td>
+						<td><a href="https://twitter.com/CallidusLupos" target="_blank"><img src="imagem/witter.png" width="35px"></a></td>
+						<td><a href="http://outlook.com" target="_blank"><img src="imagem/out.png" width="35px"></a></td>
+						<td><a href="http://gmail.com" target="_blank"><img src="imagem/gmail.png" width="35px"></a></td>
+					    <td><img src="imagem/tel.png" width="35px" id="contat"><div id="tell">Entrar em contato</div>
+							<div id="fun">
+								<div id="telefone">
+									<div id="fechar">X</div>
+									<div id="conteudo">
+										<center>
+											<h3>Quer saber mais</h3>
+											<p id="ms">Entre em contato com nossos atendentes, faça seu orçamento sem compromisso! Veja o que temos
+											de melhor para sua empresa. Online no whatsapp quase a todo momento, telefones fixos funcionam apensas
+											em horario comercial, porem, se preferir pode deixar seu recado que entraremos em contato o mais rapido
+											possivel! Estamos a sempre a sua disposição :-D</p>
+											<img src="imagem/whatsapp.png" width="50px"><label class="co">(11)97689-8764</label>
+											<p id="teli"><img src="imagem/telee.png" width="50px"><label id="pos">(11)3789-7734</label></p>
+										</center>
+									</div>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>
+				<table id="status">
+					<tr>
+						<td class="lili"><a href="regra.html" class="sta">Regras</a></td>
+						<td class="lili"><a href="privacidade.html" class="sta">Privacidade</a></td>
+						<td class="lili"><a href="servico.html" class="sta">Serviço</a></td>
+						<td class="lili"><a href="termo.html" class="sta">Termos</a></td>
+						<td class="lili"><a href="seguranca.html" class="sta">Segurança</a></td>
+					</tr>
+				</table>
+				<p id="copy">Copyright@CallidusLupos2017</p>
+			</div>
+		</div>
+	</body>
+</html>

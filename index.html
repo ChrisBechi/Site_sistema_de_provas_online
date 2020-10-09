@@ -1,0 +1,217 @@
+﻿<html>
+	<head>
+		<title>Callidus Lupos</title>
+		<meta charset="utf8">
+		<link rel="stylesheet" href="_css/Estilo.css" type="text/css">
+		<link rel="icon" type="img/png" href="imagem/logo.png">
+		<script src="jquery.js" type="text/javascript"></script>
+		<script type="text/javascript"></script>
+		<script src="spo.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js" type="text/javascript"></script>
+		<script src="http://malsup.github.com/jquery.cycle.all.js" type="text/javascript"></script>
+		<script>
+			$(function(){
+				$("#back").cycle({fx:'fade',speed:2000,timeout:1000,})
+			});
+		</script>
+		<script>
+			function log(lolo){
+				document.getElementById("logos").src = lolo;
+			}
+			
+			$(function(){
+				var tama = document.getElementById('back').clientHeight * 1 
+				var tama2 = document.getElementById("back").clientHeight * 2 - 58
+				$(window).scroll(function(){
+					if($(this).scrollTop() < tama2){
+						document.getElementById("logos").src = "imagem/trans.png";
+					}
+				});
+			});
+
+			$(function(){   
+				var tam = document.getElementById('back').clientHeight - 59
+				var alt = document.getElementById('back').clientHeight * 2 - 58
+				$(window).scroll(function(){ 
+					if ($(this).scrollTop() > tam && $(this).scrollTop() < alt){ 
+						document.getElementById("logos").src = "imagem/quem.png";
+					}
+				});  
+			});
+	
+
+			$(function(){   
+				var tam1 = document.getElementById('back').clientHeight * 2 - 59
+				var alt1 = document.getElementById('back').clientHeight * 3
+				$(window).scroll(function(){ 
+					if ($(this).scrollTop() > tam1 && $(this).scrollTop() < alt1){ 
+						document.getElementById("logos").src = "imagem/dire.png";
+				}
+			});  
+			});
+			
+			$(function(){   
+				var al = document.getElementById('back').clientHeight * 3
+				$(window).scroll(function(){ 
+					if ($(this).scrollTop() > al){ 
+						document.getElementById("logos").src = "imagem/tele.png";
+				}
+			});  
+			});
+			
+			$(document).ready(function($) { 
+			$(".menu, #spd, .btn1").click(function(){        
+			$('html,body').animate({scrollTop:$(this.hash).offset().top}, 600);
+   });
+});
+
+$(document).ready(function(){
+	$('#contat').click(function(){  
+		$('#tell').fadeOut(500);
+		$('#fun, #telefone').fadeIn(500);
+	});
+	
+	$('#fechar , #fun').click(function(event){
+		if(event.target !== this){
+			return;
+		}
+			$('#fun,#telefone').fadeOut(500);
+			$('#tell').fadeout(0.1);
+	});
+	
+});
+		</script>
+	</head>
+	<body>
+		<div id="back">
+			<img src="imagem/12.jpg" width="100%" height="100%">
+			<img src="imagem/reuniao.jpg" width="100%" height="100%">		
+			<img src="imagem/secretaria.jpg" width="100%" height="100%">
+		</div>
+			<nav class="nav">
+		    <a href="index.html"><img src="imagem/logo.png" width="56"></a><h4>Callidus Lupos</h4>
+           			<ul>
+					<li id="ico"><img src="imagem/trans.png" id="logos" width="50px"></li>
+				    <a href="#contatt" class="menu" class="rolar"><li class="ba" onmouseover="log('imagem/tele.png')" onmouseout="log('imagem/trans.png')">Contatos</li></a>
+				    <li class="barr">Produtos
+						<ul>
+							<a href="SPO.html"><li class="men" id="cima">SPO</li></a>
+							<a href="http://galeria.fabricadeaplicativos.com.br/callidus_lupos" target="_blank"><li class="men" id="cima">Aplicativos</li></a>
+							<a href=""><li class="men">Outros</li></a>
+						</ul>
+					</li>
+				    <a href="#diree" class="menu" class="rolar"><li class="bar" onmousemove="log('imagem/dire.png')" onmouseout="log('imagem/trans.png')">Diretrizes</li></a>
+				    <a href="#qsomos" class="menu" class="rolar"><li class="barra" onmousemove="log('imagem/quem.png')" onmouseout="log('imagem/trans.png')">Quem somos?</li></a>
+			        </ul>
+		</nav>  
+		<hr class="lin" id="war">
+		<div id="slogam">
+			<h1 id="conh">As melhores soluções, para cada necessidade</h1>
+			<p id="sub">Um projeto ambicioso, que mistura tecnologia e sustentabilidade</p>
+		</div>
+		<a href="#cont" class="btn1"><div id="btn"><p id="btndown">Contate-nos</p></div></a>
+		
+		
+		<div id="qs" onmousemove="log('imagem/quem.png')">
+			<a id="qsomos"> </a>
+			<br><br><br><br><br><br><br><br>
+			<h1 id="qst">Todas as soluções e criações de softwares<br> no mesmo lugar!!!</h1>
+			<hr class="lin" id="qsl">
+			<p id="subq">Callidus Lupos - Uma empresa brasileira que veem por meio de oportunidades, contruir uma empresa que facilita 
+						e agiliza o trabalho de você e da sua empresa. Brasileira e recem criada, a Callidus Lupos conta com profissionais
+						altamente qualificados, focados e com grande comprometimento á todos os projetos, desde o menor até o mais robusto e completo.
+						Venha já conhecer nosso trabalho, traga seu projeto para nossos especialistas analisarem e informa-lo o que melhor 
+						se adequa as suas necessidade. Não perca tempo, entre já em contato conosco.</p>
+			<a href="#diree" id="spd"><div class="btn2">
+				<p id="btn2">Diretrizes</p>
+			</div></a>
+		</div>
+		
+		
+		<div id="dire" onmousemove="log('imagem/dire.png')"><a id="diree" class="rola"> </a>
+               <section>
+					<h1 id="direr">Nossas diretrizes</h1>
+					<hr class="lin" id="dirr">
+					<div class="fundo">
+						<h2 id="sus">Sustentabilidade</h2>
+						<p class="proj"><br>Nosso projeto tem como foco a sustentabilidade. </p>
+					</div>
+					
+					<div class="fundo">
+						<h2 id="sus">Preservação do nosso Planeta</h2>
+						<p class="proj">Como o projeto é totalmente digital, dispensa o uso de materiais retirados da natureza. Pare de usar folhas para a criação de suas provas. Evite o desmatamento, adquira já sua liceça do nosso produto.</p>
+					</div>
+					
+					<div class="fundo">
+						<h2 id="sus">Para você Professor</h2>
+						<p class="proj"><br>Chega de quebrar a cabeça imprimindo, corrigindo por horas a fio as suas avaliações, agora voce pode fazer tudo isso em poucos minutos, deixe a tecnologia trabalhar ao seu favor, e aproveite seu tempo para o seu lazer</p>
+					</div>
+					
+					<div class="fundo">
+						<h2 id="sus">Um projeto audacioso</h2>
+						<p class="proj"><br>Com o avanço da tecnologia, todos devemos nos adaptar e abrir espaço para novas tendências, devemos acompanhar a tecnologia conforme ela cresce, e esse é um bom jeito de aumentar a agilidade.</p>
+					</div>
+					
+			   </section>	
+		</div>
+		
+		
+		<div id="cont" onmouseover="log('imagem/tele.png')">
+			<a id="contatt" class="rola"> </a>
+			<hr id="contv">
+			<div id="box">
+				<fieldset>
+					<legend>Contate-nos</legend>
+					<form method="get" action="mailto:calliduslupos@hotmail.com">
+						<Label>Nome: &nbsp;&nbsp;&nbsp;</label><input type="text" name="nome" placeholder=" Nome:" maxlength="50" size="38"><br /><br />
+						<Label>E-mail: &nbsp;&nbsp;</label><input type="email" name="emai" placeholder=" E-mail:" maxlength="50" size="38"><br /><br />
+						<Label>Assunto: </label><input type="text" name="assunt" placeholder=" Assunto:" maxlength="50" size="38"><br /><br />
+						<Label>Mesnsagem:</Label><br />
+						<textarea name="msg" placeholder=" Digite aqui sua mensagem..." id="msg"></textarea>
+						<input type="submit" name="nome" value="Enviar" id="btn_enviar">
+					</form>
+				</fieldset>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.089256112594!2d-46.79211708540485!3d-23.601131684663137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5501c461b287%3A0x1421a9f458550015!2sETEC+Uirapuru!5e0!3m2!1spt-BR!2sbr!4v1496979805245" width="650" height="530" frameborder="0" style="border:0" allowfullscreen></iframe>
+				<table>
+					<tr border="0">
+						<td><a href="https://www.facebook.com/callidus.lupus" target="_blank"><img src="imagem/grey-facebook.png" width="35px"></a></td>
+						<td><a href="https://www.instagram.com/callidusluspos/" target="_blank"><img src="imagem/insta.png" width="35px"></a></td>
+						<td><a href="https://twitter.com/CallidusLupos" target="_blank"><img src="imagem/witter.png" width="35px"></a></td>
+						<td><a href="http://outlook.com" target="_blank"><img src="imagem/out.png" width="35px"></a></td>
+						<td><a href="http://gmail.com" target="_blank"><img src="imagem/gmail.png" width="35px"></a></td>
+					        <td><img src="imagem/tel.png" width="35px" id="contat"><div id="tell">Entrar em contato</div>
+							<div id="fun">
+								<div id="telefone">
+									<div id="fechar">X</div>
+									<div id="conteudo">
+										<center>
+											<h3>Quer saber mais</h3>
+											<p id="ms">Entre em contato com nossos atendentes, faça seu orçamento sem compromisso! Veja o que temos
+											de melhor para sua empresa. Online no whatsapp quase a todo momento, telefones fixos funcionam apensas
+											em horario comercial, porem, se preferir pode deixar seu recado que entraremos em contato o mais rapido
+											possivel! Estamos a sempre a sua disposição :-D</p>
+											<img src="imagem/whatsapp.png" width="50px"><label class="co">(11)97689-8764</label>
+											<p id="teli"><img src="imagem/telee.png" width="50px"><label id="pos">(11)3789-7734</label></p>
+										</center>
+									</div>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>
+				<table id="status">
+					<tr>
+						<td class="lili"><a href="regra.html" class="sta">Regras</a></td>
+						<td class="lili"><a href="privacidade.html" class="sta">Privacidade</a></td>
+						<td class="lili"><a href="servico.html" class="sta">Serviço</a></td>
+						<td class="lili"><a href="termo.html" class="sta">Termos</a></td>
+						<td class="lili"><a href="seguranca.html" class="sta">Segurança</a></td>
+					</tr>
+				</table>
+			</div>
+			<div id="roda">
+				<p id="copy">Copyright@CallidusLupos2017</p>
+			</div>
+		</div>
+	</body>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+</html>
